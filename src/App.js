@@ -5,6 +5,9 @@ import Header from './components/Header';
 // componentlerde değişken render edebiliriz=>
 const name = "Mehmet Aziz";
 
+// componentlerde koşullu değişken render edebiliriz
+const isLoggedIn = true; //giriş yapmış.
+
 function App() {
   return (
     <div className="App">
@@ -15,6 +18,11 @@ function App() {
       {/* komponentte değişken render etmek*/}
       <h1>{name}</h1>
       <h1>{`benim adım => ${name}`}</h1>
+      <h1>{
+        isLoggedIn
+        ? `Benim adım ${name} ve giriş yaptım.`
+        : `Benim adım ${name} ve giriş yapmadım`
+      }</h1>
     </div>
   );
 }
