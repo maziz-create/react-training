@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
+import User from './components/User'
 
 // componentlerde değişken render edebiliriz=>
 const name = "Mehmet Aziz";
@@ -23,6 +24,9 @@ function App() {
         ? `Benim adım ${name} ve giriş yaptım.`
         : `Benim adım ${name} ve giriş yapmadım`
       }</h1>
+      {/* başka bir componentte yapılacak iş için buradan prop gönderiyoruz.
+      Angulardaki karşılığı => @Input(): değişkenIsmi; dedesinden yani bizden veriyi bekliyor. */}
+      <User name="Mehmet Aziz Algüllü => app.js'den gönderildi." />
     </div>
   );
 }
