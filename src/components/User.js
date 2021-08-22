@@ -31,4 +31,11 @@ User.propTypes = {
 
 };
 
+/*
+beklenilen bir prop gönderilmediyse ya da içi boş geldiyse default olarak ne vereceğiz?
+*/
+User.defaultProps = {
+    isLoggedIn: false,
+}
+
 export default User;
