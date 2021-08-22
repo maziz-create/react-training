@@ -8,6 +8,8 @@ import { useState } from "react";
   istediğimiz bir anda istediğimiz bir değeri değiştirebiliriz. mesela birisi mesaj attığında
   sayfayı yenilemeden o mesajı görmek gibi.
 */
+
+// not: herhangi bir state güncellendiği anda return işlemi baştan render edilir.
 function App() {
   //State'i böyle tanımlıyoruz. const[stataName, functionOfChangeName] = useState(initialState);
   const [name, setName] = useState("Mehmet Aziz");
