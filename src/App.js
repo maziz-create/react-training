@@ -24,10 +24,20 @@ function App() {
 
       {//key verme sebebimiz => buralarda map gibi şeyleri kullanman için her bi dive unique key vermek zorundasın
         friends
-        .map((friend, index) => (
-          <div key={index}>{friend}</div>
-        ))
+          .map((friend, index) => (
+            <div key={index}>{friend}</div>
+          ))
       }
+      <br />
+      <br />
+      {/* 
+          friends dizisine yeni eleman ekledik. dikkat edilmesi gerekenler:
+          => dizinin initialState'i bir dizi olduğu için biz de dizi olarak verdik. 
+          Yoksa yukarıdaki mapleme işlemi sıkıntı çıkartır.
+          => önceki değerleri vermeyip direkt Onuru verirsek eski değerler gider.
+          Bunun için    ...eskiDizi  mevzusu var, biliyorsun.
+      */}
+      <button onClick={() => setFriends([...friends, ['Yeni Kişi => Onur']])}>Click</button>
     </div>
   );
 }
