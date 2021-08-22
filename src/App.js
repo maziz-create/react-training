@@ -17,6 +17,9 @@ function App() {
   //State'in initialValue ' sunu array olarak verip aşağıda map ederek yazdırabiliriz.
   const [friends, setFriends] = useState(["Deniz", "Samet"]);
 
+  //State'in initialValue ' sunu obje olarak verebiliriz.
+  const [address, setAddress] = useState({ title: "Ankara", zip: 606 });
+
   return (
     <div className="App">
       <h1>Merhaba, {name}!</h1>
@@ -28,8 +31,6 @@ function App() {
             <div key={index}>{friend}</div>
           ))
       }
-      <br />
-      <br />
       {/* 
           friends dizisine yeni eleman ekledik. dikkat edilmesi gerekenler:
           => dizinin initialState'i bir dizi olduğu için biz de dizi olarak verdik. 
@@ -38,6 +39,22 @@ function App() {
           Bunun için    ...eskiDizi  mevzusu var, biliyorsun.
       */}
       <button onClick={() => setFriends([...friends, ['Yeni Kişi => Onur']])}>Click</button>
+
+      <br />
+      <br />
+
+      {/* adresi render ettik ve butonla değiştirdik. */}
+      <h2>Address</h2>
+      <div>
+        {address.title} {address.zip}
+      </div>
+
+      <button onClick={() => setAddress({
+        title: "degistirilen adres",
+        zip: 111
+      })}>Click</button>
+
+
     </div>
   );
 }
