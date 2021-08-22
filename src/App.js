@@ -14,10 +14,20 @@ function App() {
   //State'i böyle tanımlıyoruz. const[stataName, functionOfChangeName] = useState(initialState);
   const [name, setName] = useState("Mehmet Aziz");
 
+  //State'in initialValue ' sunu array olarak verip aşağıda map ederek yazdırabiliriz.
+  const [friends, setFriends] = useState(["Deniz", "Samet"]);
+
   return (
     <div className="App">
       <h1>Merhaba, {name}!</h1>
       <button onClick={() => setName("isim değiştirildi => Ahmet")}>Click</button>
+
+      {//key verme sebebimiz => buralarda map gibi şeyleri kullanman için her bi dive unique key vermek zorundasın
+        friends
+        .map((friend, index) => (
+          <div key={index}>{friend}</div>
+        ))
+      }
     </div>
   );
 }
