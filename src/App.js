@@ -26,7 +26,14 @@ function App() {
       }</h1>
       {/* başka bir componentte yapılacak iş için buradan prop gönderiyoruz.
       Angulardaki karşılığı => @Input(): değişkenIsmi; dedesinden yani bizden veriyi bekliyor. */}
-      <User name="Mehmet Aziz Algüllü => app.js'den gönderildi." age={22} />
+      <User 
+      name="Mehmet Aziz Algüllü => app.js'den gönderildi."
+       age={22}
+       address={{
+         title: "adres",
+         zipcode: "135"
+       }} 
+       />
     </div>
   );
 }
