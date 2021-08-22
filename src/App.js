@@ -36,6 +36,7 @@ function App() {
        />
     </div>
   );
+  // ..
 }
 /* jsx nedir ? => burası bir javascript dökümanı ve içinde html yazabiliyoruz... return içinde yani.
       bunun sebebini jsx veriyor. bu yazdıklarımız birer html değil aslında. javascript fakat
