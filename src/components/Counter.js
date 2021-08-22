@@ -14,3 +14,11 @@ function Counter() {
 }
 
 export default Counter
+
+/*
+    not: jquery ile react'ın render etme mekanizması arasındaki fark nedir?
+    jquery => render edilecek şeyin yeni şey ile aynı olup olmadığına bakmaz, render eder.
+    react => render edilecek şey ile yeni şey aynı ise render etmez!
+    fakat react'ın da tekrar render edebildiği durumlar olabiliyor. bunlara memorise konularında 
+    değinilecek.
+*/
