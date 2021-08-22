@@ -11,7 +11,8 @@ function User(props) {
 
 //gelen name'i string olarak kabul ediyorum.
 User.propTypes = {
-    name: PropTypes.string
+    name: PropTypes.string.isRequired
+    // isRequired => kesin olarak name ' i string olarak göndermeli. null dahi gönderemez.(undefined)
 };
 
 export default User;
