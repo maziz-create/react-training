@@ -36,6 +36,13 @@ function App() {
     anlamı => sadece number state güncellendiği anda konsola yaz. 
     */
     console.log("number state güncellendi!");
+
+    /* NOT! burası component unmount edildiğini algılar. Önemlidir!
+    Bazen componentler kaldırılır fakat componente veri sağlayan şey kaldırılmadığı için
+    performans kaybı, memory leak mevzuları oluşur. Component unmount edildiği zaman 
+    clearInterval ile gereksiz şeyleri kaldırıyoruz.
+    */
+    return () => clearInterval("durdurmak istediğin method, mevzular");
   }, [number]);
 
   useEffect(() => {
