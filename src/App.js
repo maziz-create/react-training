@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import ThirdState from './components/ThirdState';
 
 /*
   useEffect(react'tan import edildi.) 
@@ -18,8 +19,12 @@ function App() {
   // sonradan eklediğimiz içinci state'imiz.
   const [name, setName] = useState("Mehmet");
 
+  // sonradan eklediğimiz üçüncü state grubumuz [2]. (ilki ThirdState.js ' de yer alıyor.)
+  const [isVisible, setIsVisible] = useState(true);
+
+  /* ilk ve ikinci state'e dair useEffect ve mount kullanımları */
   useEffect(() => { /* herhangi bir state güncellendiği anda konsola yaz. */
-    console.log("state güncellendi!");
+    console.log("herhangi bir state güncellendi!");
   })
 
   useEffect(() => {/* fark => [] budur. buna dependency array deniliyor. 
@@ -37,15 +42,23 @@ function App() {
     console.log("number veya name state güncellendi!");
   }, [number, name]);
 
+
   return (
     <div className="App">
-      <h2>{number}</h2>
+      <h2>İlk state'e dair</h2>
+      <h3>{number}</h3>
       <button onClick={() => setNumber(number + 1)}>Click</button>
 
       <hr />
 
-      <h2>{name}</h2>
+      <h2>İkinci state'e dair</h2>
+      <h3>{name}</h3>
       <button onClick={() => setName("Mehmet değil Mehmet Aziz")}>Click</button>
+
+      <hr />
+
+      {isVisible && <ThirdState />}
+      <button onClick={() => setIsVisible(!isVisible)}>Üçüncü State'i kaldır veya göster!</button>
     </div>
   );
 }
