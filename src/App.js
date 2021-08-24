@@ -3,6 +3,13 @@ import { useState, useEffect } from 'react';
 import ThirdState from './components/ThirdState';
 
 /*
+  LifeCycle nedir? componentler de insanlar gibi yaşar ve ölür.
+  biz burada bu yaşam döngüsünü kontrol ettik.
+  yaşadıkları ve öldükleri anlarda neler olacağına dair işlemler yaptık.
+  bunları yaparken useEffect(+2overload) kullandık.
+*/
+
+/*
   useEffect(react'tan import edildi.) 
   açıklama => bir state tanımladık. state değiştiği anda ilgili component render edilecek.
   peki biz herhangi bir state'in güncellenme durumunu yani render edilme durumunu nasıl yakalayabiliriz?
